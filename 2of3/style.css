@@ -1,0 +1,14 @@
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+
+  font-size: 2rem;
+}
+
+input {
+  margin: 2rem;
+  transform: translateY(-0.2rem) scale(2);
+}
