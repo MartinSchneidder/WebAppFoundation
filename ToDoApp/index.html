@@ -18,15 +18,22 @@
           <input id="input" type="text" />
           <input id="btn_add" type="button" value="ADD" />
         </div>
-        <input id="btn_open" type="button" value="What's Open" />
-        <input id="btn_done" type="button" value="What's Done" />
+
+        <div>
+          <input id="checkbox_open" type="radio" checked />
+          <label for="checkbox_open">Open tasks</label>
+        </div>
+
+        <div>
+          <input id="checkbox_done" type="radio" />
+          <label for="checkbox_done">Done tasks</label>
+        </div>
+
         <input id="btn_rmvdone" type="button" value="Remove Done Tasks" />
       </div>
+
       <div class="col_list">
-        <ul id="list">
-          <li>Startwert1</li>
-          <li>Startwert2</li>
-        </ul>
+        <ul id="list"></ul>
       </div>
     </main>
 

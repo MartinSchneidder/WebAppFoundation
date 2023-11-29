@@ -1,34 +1,43 @@
-const hexa = document.getElementById("hexa");
-const showColor = document.getElementById("showColor");
+const input = document.getElementById("input");
+const btn_add = document.getElementById("btn_add");
+const list = document.getElementById("list");
 
-const red = document.getElementById("red");
-const green = document.getElementById("green");
-const blue = document.getElementById("blue");
-let color = "";
+let toDoArr = {
+  1: "eins",
+  2: "zwei",
+  3: "drei",
+  4: "vier",
+};
+let toDoArrSize = Object.getOwnPropertyNames(toDoArr).length;
+input.value = "TestValue";
 
-red.addEventListener("oninput", function () {
-  showColor.style.background = "#" + red.value;
-  console.log(red.value);
-});
+// const addli = document.createElement("li");
+// addli.appendChild(document.createTextNode("TEXT"));
+// list.appendChild(addli);
 
-red.oninput = draw;
-green.oninput = draw;
-blue.oninput = draw;
+//!!!!!!!!!!ADD checkboxes!!!!!!!!!
+function writeList() {
+  for (const key in toDoArr) {
+    list
+      .appendChild(document.createElement("li"))
+      .appendChild(document.createTextNode(toDoArr[key]));
 
-function draw() {
-  color =
-    "#" +
-    (Number(red.value).toString(16).length < 2
-      ? "0" + Number(red.value).toString(16)
-      : Number(red.value).toString(16)) +
-    (Number(green.value).toString(16).length < 2
-      ? "0" + Number(green.value).toString(16)
-      : Number(green.value).toString(16)) +
-    (Number(blue.value).toString(16).length < 2
-      ? "0" + Number(blue.value).toString(16)
-      : Number(blue.value).toString(16));
-  showColor.style.background = color;
-  hexa.innerText = color;
+    console.log(toDoArr);
+    console.log(toDoArr[key]);
+    console.log(input.value);
+  }
 }
 
-draw();
+function render() {
+  list.innerText = "";
+  writeList();
+}
+
+btn_add.addEventListener("click", () => {
+  toDoArr[toDoArrSize + 1] = input.value;
+  toDoArrSize += 1;
+  render();
+});
+
+//initial RENDER
+render();
