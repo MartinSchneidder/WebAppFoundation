@@ -37,6 +37,10 @@
   font-size: 2rem;
 }
 
+#list {
+  list-style-type: none;
+}
+
 /* Thoughts!!!!!!!!!! */
 /* ScaleFontsize Input range */
 /* option for num of rows */
