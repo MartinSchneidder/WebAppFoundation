@@ -6,10 +6,10 @@
 [x] Design -[x] Mockups
 [x] Development
 
-- [ x ] Unit testing -[ x ] QA
-  [ x ] Stage
-  [ ] Beta Testing
-  [] Production
+- [x] Unit testing -[ x ] QA
+      [ x ] Stage
+      [ ] Beta Testing
+      [] Production
 
 Displaying Todos
 You will start with displaying the todos of your application state in a list.
