@@ -2,32 +2,44 @@ const input = document.getElementById("input");
 const btn_add = document.getElementById("btn_add");
 const list = document.getElementById("list");
 
-let toDoArr = {
-  0: "default",
-  1: "zwei",
-  2: "drei",
-  3: "vier",
-};
-let toDoArrSize = Object.getOwnPropertyNames(toDoArr).length;
+let toDosArr = [
+  {
+    id: 0,
+    desc: "default",
+    flag: "open",
+  },
+
+  {
+    id: 1,
+    desc: "2",
+    flag: "open",
+  },
+
+  {
+    id: 2,
+    desc: "3",
+    flag: "open",
+  },
+];
+
+let toDoArrSize = toDosArr.length;
 input.value = "TestValue";
 
 // const addli = document.createElement("li");
 // addli.appendChild(document.createTextNode("TEXT"));
 // list.appendChild(addli);
 
-//!!!!!!!!!!ADD checkboxes!!!!!!!!!
+//!!!ACTIVE BUTTONS über url WINDOW.LOCATION
 
 function writeList() {
-  for (const key in toDoArr) {
+  for (const key in toDosArr) {
     const new_checkbox = document.createElement("input");
     new_checkbox.type = "checkbox";
     new_checkbox.id = key;
-    new_checkbox.style.marginRight = "2rem";
 
-    console.log(key);
     list.appendChild(document.createElement("li"));
-    list.appendChild(new_checkbox);
-    list.appendChild(document.createTextNode(toDoArr[key]));
+    list.append(new_checkbox);
+    list.appendChild(document.createTextNode(toDosArr[key].desc));
   }
 }
 
@@ -41,20 +53,27 @@ btn_add.addEventListener("click", () => {
     return console.warn("NO INPUT");
   }
 
-  let todo = "";
-  todo = input.value;
+  //create new ToDoObj
+  let todo = {
+    id: toDoArrSize,
+    desc: input.value,
+    flag: "open",
+  };
+
   //cut Whitespaces off
-  while (todo[todo.length - 1] == " ") {
-    todo = todo.slice(0, todo.length - 1);
+  if (todo.desc[todo.desc.length - 1] == " " || todo.desc[0] == " ") {
+    todo.desc = todo.desc.trim();
   }
-  input.value = todo;
+  //sync the inputfiel
+  input.value = todo.desc.trim();
 
   //put new todo to List
-  toDoArr[toDoArrSize] = todo;
+  toDosArr[toDoArrSize] = todo;
   toDoArrSize += 1;
-
+  console.log(toDosArr); //!!!!!!!!!!!!!!!!!!!!!!!!!löschen
   render();
 });
 
+console.log(toDosArr); //!!!!!!!!!!!!!!!!!!!!!!!!!löschen
 //initial RENDER
 render();

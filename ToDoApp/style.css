@@ -40,6 +40,32 @@
 #list {
   list-style-type: none;
 }
+#list > input {
+  margin-right: 2rem;
+}
+
+/* Benutzerdefinierte Checkboxen!!!
+[type="checkbox"] {
+  position: absolute;
+}
+[type="checkbox"] {
+  position: relative;
+  -webkit-appearance: none;
+}
+[type="checkbox"]::before {
+  width: 15px;
+  height: 15px;
+  background-color: red;
+  display: block;
+  content: "";
+  float: left;
+  margin-right: 5px;
+  z-index: 5;
+  position: relative;
+}
+input[type="checkbox"]:checked::before {
+  background-color: green;
+} */
 
 /* Thoughts!!!!!!!!!! */
 /* ScaleFontsize Input range */
