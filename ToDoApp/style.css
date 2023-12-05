@@ -40,12 +40,13 @@
 #list {
   list-style-type: none;
 }
-#list > input {
+
+input[type="checkbox"] {
   margin-right: 2rem;
 }
 
-/* Benutzerdefinierte Checkboxen!!!
-[type="checkbox"] {
+/* Benutzerdefinierte Checkboxen!!! */
+/* [type="checkbox"] {
   position: absolute;
 }
 [type="checkbox"] {
