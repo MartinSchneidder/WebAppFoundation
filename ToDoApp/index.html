@@ -14,13 +14,14 @@
 
     <main class="main">
       <div class="col_tools">
-        <div>
-          <input id="input" type="text" />
-          <input id="btn_add" type="button" value="ADD" />
-        </div>
+        <form id="form_input">
+          <label for="input" required>Neuer Task:</label>
+          <input type="text" name="input" id="input" />
+          <input id="btn_add" type="button" value="+" />
+        </form>
 
         <div>
-          <input id="radio_all" type="radio" name="radio_todos" />
+          <input id="radio_all" type="radio" name="radio_todos" checked />
           <label for="radio_all">All tasks</label>
         </div>
 
