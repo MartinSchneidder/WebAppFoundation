@@ -53,8 +53,8 @@ Let's get rid of duplicates - you will now implement a feature that will disallo
 
 Because filtering is a nice feature you will now implement one.
 
-- [ ] Add a filter which allows to display either "all todos", "open todos" or "done todos"
-- [ ] Use radio buttons to dipslay the filters
+- [x] Add a filter which allows to display either "all todos", "open todos" or "done todos"
+- [x] Use radio buttons to dipslay the filters
 
 ### Remove done Todos
 
