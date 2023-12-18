@@ -62,9 +62,10 @@ btn_add.addEventListener("click", () => {
 
 //-------  BUTTON REMOVE DONE TASKS  -------//
 btn_rmvdone.addEventListener("click", () => {
-  radio_all.checked = true; //to see whats left
-
   state.toDoArr = state.toDoArr.filter((e) => e.done_status == false);
+
+  radio_all.checked = true; //to see whats left
+  state.filter = "all";
 
   //Storage sync
   localStorage.setItem("List", JSON.stringify(state.toDoArr));
@@ -95,6 +96,16 @@ radio.forEach((radioBTN) => {
     }
   });
 });
+
+function openNav() {
+  document.getElementById("mySidebar").style.width = "250px";
+  document.getElementById("mainList").style.marginLeft = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("mainList").style.marginLeft = "0";
+}
 
 //**============================   FUNCTIONS   ============================**//
 

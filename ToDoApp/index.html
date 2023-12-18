@@ -13,33 +13,41 @@
     </header>
 
     <main class="main">
-      <div class="col_tools">
+      <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+
         <form id="form_input">
-          <label for="input" required>Neuer Task:</label>
-          <input type="text" name="input" id="input" />
+          <label for="input" class="inputLabel">NewTask</label>
+          <input type="text" name="input" id="input" class="input" />
           <input id="btn_add" type="button" value="+" />
         </form>
 
-        <div>
-          <input id="radio_all" type="radio" name="radio_todos" checked />
-          <label for="radio_all">All tasks</label>
-        </div>
+        <div class="radiobuttons">
+          <div>
+            <input id="radio_all" type="radio" name="radio_todos" checked />
+            <label for="radio_all">All tasks</label>
+          </div>
 
-        <div>
-          <input id="radio_open" type="radio" name="radio_todos" />
-          <label for="radio_open">Open tasks</label>
-        </div>
+          <div>
+            <input id="radio_open" type="radio" name="radio_todos" />
+            <label for="radio_open">Open tasks</label>
+          </div>
 
-        <div>
-          <input id="radio_done" type="radio" name="radio_todos" />
-          <label for="radio_done">Done tasks</label>
+          <div>
+            <input id="radio_done" type="radio" name="radio_todos" />
+            <label for="radio_done">Done tasks</label>
+          </div>
         </div>
 
         <input id="btn_rmvdone" type="button" value="Remove Done Tasks" />
       </div>
 
-      <div class="col_list">
-        <ul id="list"></ul>
+      <button class="openbtn" onclick="openNav()">☰ Open Sidebar</button>
+
+      <div id="mainList">
+        <div class="col_list">
+          <ul id="list"></ul>
+        </div>
       </div>
     </main>
 
