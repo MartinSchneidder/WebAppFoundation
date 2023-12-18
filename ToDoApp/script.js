@@ -41,7 +41,7 @@ function render() {
 function init() {
   state.toDoArr = JSON.parse(localStorage.getItem("List"));
 
-  if (state.toDoArr.length == 0) {
+  if (state.toDoArr == null || state.toDoArr.length == 0) {
     state.toDoArr = [{ id: 0, desc: "default", done_status: false }];
   }
   render();
