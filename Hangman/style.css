@@ -1,0 +1,51 @@
+* {
+  margin: 0;
+  font-family: monospace;
+  font-size: 1.5rem;
+}
+
+#letterSpaces {
+  margin-top: 10vh;
+  margin-bottom: 10vh;
+
+  display: flex;
+  justify-content: center;
+}
+#letterSpaces p {
+  padding: 2px;
+}
+
+.letterButtons button {
+  margin-right: 2px;
+  margin-top: 2px;
+  background-color: white;
+  width: 2rem;
+}
+
+.flexButtons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.letterButtons button:hover {
+  background-color: whitesmoke;
+}
+
+.letterButtons button:active {
+  background-color: gainsboro;
+}
+
+header {
+  display: flex;
+  justify-content: space-around;
+}
+#newGameButton {
+  background-color: white;
+}
+#newGameButton:hover {
+  background-color: whitesmoke;
+}
+#newGameButton:active {
+  background-color: gainsboro;
+}
