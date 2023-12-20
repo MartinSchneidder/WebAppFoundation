@@ -6,4 +6,4 @@
 - [LightSwitch](https://martinschneidder.github.io/WebAppFoundation/LightSwitch/)
 - [PasswordToggle](https://martinschneidder.github.io/WebAppFoundation/PasswordToggle/)
 - [ToDoApp](https://martinschneidder.github.io/WebAppFoundation/ToDoApp/) (**Capstone**)
-- [Hangman](https://martinschneidder.github.io/WebAppFoundation/HangMan/)
+- [Hangman](https://martinschneidder.github.io/WebAppFoundation/Hangman/)
