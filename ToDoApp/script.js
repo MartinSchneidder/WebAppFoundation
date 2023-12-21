@@ -132,7 +132,7 @@ function createNewToDoObject(toDo) {
 
     //Storage sync
     localStorage.setItem("List", JSON.stringify(state.toDoArr));
-    //render(); //XXX FRAGE XXX needed for correkt Site reload after checking
+    render();
   });
 
   return new_li;
@@ -178,13 +178,4 @@ function inputNewToDo() {
   localStorage.setItem("List", JSON.stringify(state.toDoArr));
   render();
 }
-
 init();
-
-//-------2things!
-
-//error message??:
-//Unchecked runtime.lastError: Could not establish connection. Receiving end does not exist.
-
-//Seitenaktualisierung mit neuem Element gecheckt, Element ist nicht gecheckt
-//gelöst mit zusätzlichem render, muss das sein?
